@@ -1,0 +1,701 @@
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.section_title {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 26pt;
+  font-weight: 700;
+  color: #191919;
+  text-align: center;
+}
+
+.section_description {
+  font-family: 'Nunito Sans', sans-serif;
+  max-width: 630px;
+  margin: auto;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 12pt;
+  color: #787878;
+}
+
+/* --------------------------------------------------- */
+
+header {
+  width: 100%;
+  align-items: center;
+  position: absolute;
+  z-index: 10
+}
+
+header.no-index {
+  position: relative;
+}
+
+.burger {
+  display: none;
+}
+
+.menu-content {
+  margin: 39px 0;
+}
+
+.menu_list {
+  display: block;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+
+.menu_list li {
+  display: inline-flex;
+  margin: 0 12px;
+}
+
+.menu_item {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 10pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #191919;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.menu_item.active {
+  color: #10c9c3;
+}
+
+.menu_item:hover {
+  text-decoration: none;
+  color: #10c9c3;
+}
+
+.banner {
+  width: 100%;
+  height: 87vh;
+  display: flex;
+  align-items: center;
+  background: url(../img/coffee-1284041_1920_2.jpg) no-repeat 100% 50%;
+  background-size: cover;
+}
+
+.banner .offer {
+  width: 90%;
+  margin: auto;
+}
+
+.banner .title {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 30pt;
+  font-weight: 700;
+  color: #1d1d1d;
+}
+
+.banner p {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14pt;
+  line-height: 24pt;
+  margin: 0;
+  margin-top: 33px;
+  color: #787878;
+}
+
+.banner button {
+  width: 180px;
+  height: 54px;
+  margin-top: 38px;
+  background: #10c9c3;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  font-size: 10pt;
+  font-weight: 700;
+}
+
+.about {
+  width: 100%;
+  text-align: center;
+  padding: 13vh 0 13vh 0;
+}
+
+.about .signature {
+  margin-top: 38pt;
+}
+
+.skills {
+  width: 100%;
+  display: flex;
+}
+
+.skill_block {
+  width: 50%;
+  display: inline-block;
+}
+
+.skill_block.skill {
+  background: #f8f9f9;
+}
+
+.skill_block.image {
+  background: #1d1d1d
+}
+
+.skill_block.skill .block {
+  width: initial;
+  display: block;
+  padding: 13vw 20% 13vw 20%;
+}
+
+.skill_block.skill .title {
+  font-size: 26pt;
+  font-weight: 700;
+}
+
+.skill_block.skill li {
+  margin: 40px 0;
+}
+
+.skill_block.skill .skill_name {
+  font-size: 12pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.skill_block.skill .skill_percent {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #d8d8d8;
+}
+
+.skill_block.skill .skill_percent.first::before {
+  content: '';
+  display: block;
+  width: 75%;
+  height: 3px;
+  background: #10c9c3;
+}
+
+.skill_block.skill .skill_percent.second::before {
+  content: '';
+  display: block;
+  width: 90%;
+  height: 3px;
+  background: #10c9c3;
+}
+
+.skill_block.skill .skill_percent.third::before {
+  content: '';
+  display: block;
+  width: 65%;
+  height: 3px;
+  background: #10c9c3;
+}
+
+.skill_block.image {
+  background: url(../img/notepad-3297994_1920.png) no-repeat 100% 50%;
+  background-size: cover;
+}
+
+.about_me {
+  width: 100%;
+  display: flex;
+}
+
+.about_me-block {
+  width: 50%;
+  display: inline-block;
+}
+
+.about_me-block.text {
+  background: #f8f9f9;
+}
+
+.about_me-block.image {
+  background: #1d1d1d
+}
+
+.about_me-block .block {
+  width: initial;
+  display: block;
+  padding: 10vw 20% 10vw 20%;
+}
+
+.about_me-block .title {
+  font-size: 26pt;
+  font-weight: 700;
+  color: #171717;
+}
+
+.about_me-text {
+  font-size: 15pt;
+  color: #787878;
+  margin-top: 39px;
+}
+
+.numbers {
+  background: #10c9c3;
+  padding: 13vh 0;
+}
+
+.number_block {
+  display: flex;
+  align-items: center;
+}
+
+.number_block img {
+  width: auto;
+  height: 45px;
+}
+
+.number_block span {
+  margin-left: 27px;
+  color: white;
+}
+
+.number_block .number {
+  font-size: 16pt;
+  font-weight: 700;
+  margin: 0;
+}
+
+.number_block .number_description {
+  font-size: 12pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  margin-top: 14px;
+}
+
+.works {
+  width: 100%;
+  overflow: hidden;
+}
+
+.works .portfolio {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.portfolio-image {
+  position: relative;
+  width: calc(calc( 100vw - calc(100vw - 100%))/4);
+  height: 21vw;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.imgBox {
+  position: relative;
+}
+
+.imgBox img {
+  width: 100%;
+}
+
+.pb-hover {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.85);
+  transition: all 0.5s;
+}
+
+.works.home-works .pb-hover {
+  background: rgba(16, 201, 195, 0.85);
+}
+
+.works.home-works .pb-hover:hover,
+.pb-hover:hover {
+  opacity: 1;
+}
+
+.pb-hover img {
+  display: block;
+  height: 35px;
+}
+
+.works button {
+  width: 100%;
+  height: 13vh;
+  font-size: 12pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  background: #f5f5f5;
+  color: #8e8e8e;
+}
+
+.work-process {
+  padding: 13vh 0 13vh 0;
+}
+
+.services {
+  background: #f5f5f5;
+  padding: 8vh 0 8vh 0;
+}
+
+.services .block {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.services .services_title {
+  color: #191919;
+  margin-top: 30px;
+  font-size: 12pt;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.services .services_description {
+  font-size: 13pt;
+  color: #787878;
+  line-height: 16pt;
+  margin-top: 20px;
+}
+
+.testimonials {
+  background: #10c9c3;
+  padding: 16vh 0 7vh 0;
+}
+
+.swiper-pagination {
+  position: relative;
+}
+
+.swiper-pagination-bullet-active {
+  background: white;
+}
+
+.swiper-pagination-bullet {
+  background: white;
+}
+
+.text-block, .client-name {
+  color: white;
+  font-weight: 700;
+  text-align: center;
+}
+
+.text-block {
+  font-size: 22pt;
+  line-height: 28pt;
+  max-width: 900px;
+  margin: auto;
+}
+
+.text-block::before {
+  content: '“ ';
+}
+
+.text-block::after {
+  content: ' ”'
+}
+
+.client-name {
+  margin-top: 35px;
+  font-size: 12pt;
+  text-transform: uppercase;
+  margin-bottom: 100px;
+}
+
+.clients {
+  padding: 64px 0;
+}
+
+.clients .logos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact-section {
+  background: #f5f5f5;
+  padding: 13vh 0;
+}
+
+.contact {
+  display: block;
+  max-width: 670px;
+  width: 100%;
+  margin: auto;
+  margin-top: 39px;
+}
+
+.contact input, textarea {
+  width: 100%;
+  height: 48px;
+  margin-bottom: 30px;
+  background: white;
+  border: none;
+}
+
+.contact textarea {
+  height: 170px;
+}
+
+.contact textarea[placeholder] {
+  padding-top: 15px;
+}
+
+.contact input[placeholder], textarea[placeholder] {
+  padding-left: 20px;
+}
+
+.contact-date {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-date input {
+  width: calc(50% - 15px);
+}
+
+.contact button {
+  display: block;
+  background: #10c9c3;
+  color: white;
+  font-size: 10pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  width: 180px;
+  height: 54px;
+  margin: auto;
+}
+
+footer {
+  background: #141414;
+  padding: 13vh 0;
+  color: #bcbcbc;
+  font-size: 12pt;
+}
+
+.footer-title {
+  font-size: 18pt;
+  font-weight: 700;
+  color: white;
+}
+
+.footer-details {
+  display: flex;
+  justify-content: space-around;
+}
+
+.offer {
+  padding: 13vh 0;
+}
+
+.offer .title {
+  font-size: 30pt;
+  font-weight: 700;
+  text-align: center;
+}
+
+.offer .description {
+  font-size: 14pt;
+  text-align: center;
+  width: 49%;
+  margin: auto;
+}
+
+.works-offer {
+  background: #f6f6f6;
+}
+
+.works-offer .title {
+  color: #171717;
+}
+
+.works-offer .description {
+  color: #787878;
+}
+
+.about-offer {
+  background: #3e3e3e;
+  color: white;
+}
+
+.need_project {
+  padding: 13vh 0;
+}
+
+.need_project button {
+  width: 180px;
+  height: 54px;
+  margin-top: 38px;
+  background: #10c9c3;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  font-size: 10pt;
+  font-weight: 700;
+}
+
+.contact_info {
+  background: #f5f5f5;
+  padding: 13vh 0;
+}
+
+.contact_info-block .title {
+  font-size: 26pt;
+  font-weight: 700;
+  color: #171717;
+}
+
+.contact_info-text,
+.project_single-text {
+  width: 90%;
+  font-size: 13pt;
+  color: #787878;
+  margin-top: 39px;
+  margin-bottom: 35px;
+}
+
+
+.contact_info-block ul,
+.project_single-block ul {
+  display: flex;
+}
+
+
+.contact-type {
+  font-weight: 700;
+}
+
+.contact-type::after {
+  content: ': ';
+}
+
+.contact-text {
+  padding-left: 10px;
+  color: #787878
+}
+
+.contact_info iframe {
+  margin-top: 13vh;
+}
+
+
+.project_single {
+  width: 100%;
+  display: flex;
+}
+
+.project_single-block {
+  width: 50%;
+  display: inline-block;
+}
+
+.project_single.text {
+  background: #f8f9f9;
+}
+
+.project_single-block.image {
+  background: #1d1d1d
+}
+
+.project_single-block .block {
+  width: initial;
+  display: block;
+  padding: 10vw 20% 10vw 20%;
+  background: #f6f6f6;
+}
+
+.project_single-block .title {
+  font-size: 26pt;
+  font-weight: 700;
+  color: #171717;
+}
+
+.project_single-text {
+  margin-top: 33px;
+  margin-bottom: 60px;
+}
+
+.navigate {
+  padding: 42px 0;
+}
+
+.navigate .block {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigate .block a {
+  font-size: 12pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #171717;
+}
+
+
+.navigate .block .prev::before {
+  content: '<';
+  padding-right: 13px;
+}
+
+.navigate .block .next::after {
+  content: '>';
+  padding-left: 13px;
+}
+
+.navigate .block a {
+  text-decoration: none;
+}
+
+.thanks {
+  width: 100%;
+  height: calc(100vh - calc(calc(26px + 39px * 2)));
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.thanks .thanks-text {
+  margin-top: -20%;
+  font-size: 36pt;
+  font-weight: 700;
+  color: #10c9c3;
+  text-transform: uppercase;
+}
+
+.thanks .thanks-description {
+  font-size: 14pt;
+  font-weight: 700;
+}
+
+.thanks button {
+  width: 180px;
+  height: 54px;
+  margin-top: 38px;
+  background: #10c9c3;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  font-size: 10pt;
+  font-weight: 700;
+}
