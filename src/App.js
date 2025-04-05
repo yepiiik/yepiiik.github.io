@@ -39,8 +39,7 @@ function AnimatedRoutes() {
                       </>
                     </Wrapper>
                   }
-                />
-              
+                />              
               </Routes>
           </main>
   );
