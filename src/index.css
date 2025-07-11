@@ -37,11 +37,8 @@ body {
 }
 
 #root {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    min-height: auto;
 }
 
 h1 {
@@ -65,11 +62,10 @@ p {
 
 main {
     width: 100%;
-    height: 100%;
+    height: 100dvh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
-    scrollbar-width: none;
-    padding: 60px;
+    scrollbar-color: hsl(0, 0%, 67%) transparent;
 }
 
 .list {
@@ -78,27 +74,30 @@ main {
     margin: 0;
 }
 
-.container {
-    width: 100%;
-    height: 100%;
-    border-spacing: 60px;
-    table-layout: fixed;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto 87% 1fr auto;
-    gap: 60px;
-}
-
-.container > * {
-    grid-column: 1 / -1;
-}
-
 a {
     color: var(--text-color);
 }
 
+.container {
+    margin-bottom: -60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    padding: 60px;
+    scroll-snap-align: end;
+}
+
+.main-container {
+    height: 88vh;
+}
+
 .main__nav__block {
-    display: contents;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background: linear-gradient(0deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.7) 70%);
 }
 
 .main__nav {
@@ -164,7 +163,6 @@ section .title {
 
 #mainSection {
     grid-column: 1 / span 4;
-    grid-row: 2;
     display: flex;
     flex-direction: row;
     column-gap: 60px;
@@ -191,28 +189,13 @@ section .title {
 }
 
 #experience {
-    grid-column-start: 3;
-    grid-row: 3;
+    grid-column: 1 / span 2;
 }
 
 #experience .list {
     display: flex;
     flex-direction: column;
     gap: 14px 0;
-}
-
-#quikContacts {
-    grid-column: 1 / span 2;
-}
-
-#skills {
-    grid-column-start: 4;
-    grid-row: 3;
-}
-
-#mission {
-    grid-column-start: 2;
-    grid-row: 3;
 }
 
 .containier section {
@@ -317,14 +300,6 @@ section .title {
     align-items: center;
 }
 
-.grid-row {
-    scroll-snap-align: end;
-}
-
-.contents {
-    display: contents;
-}
-
 .close {
     color: var(--text-color);
     filter: opacity(0.5);
@@ -369,10 +344,17 @@ section .title {
 
 .cv-block {
     grid-column: -3 / -1;
+    padding-bottom: 130%;
+    position: relative;
 }
 
-.cv-block embed {
-    width: 100%;
+.cv-block iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+     width: 100%;
     height: 100%;
 }
 
@@ -424,11 +406,11 @@ section .title {
     }
 
     .container {
-        margin-top: 60px;
-        grid-template-rows: 100% auto;
-        grid-template-columns: auto;
-        border-spacing: 6pt;
-        gap: 6pt;
+        margin-bottom: -60px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 60px;
+        padding: 60px;
     }
 
     section {
@@ -444,6 +426,7 @@ section .title {
         align-items: start;
         gap: 12pt;
         margin: 0;
+        height: var(--app-height);
     }
 
     #mainSection h1 {

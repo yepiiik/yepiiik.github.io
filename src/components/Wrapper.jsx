@@ -25,18 +25,18 @@ function Wrapper({children}) {
     
     return (
         
-            <div className='container'>
-                <button className='burger-menu' onClick={() => {setBurgerActive(!burgerActive)}}>{burgerActive ? "close" : "menu"}</button>
-                <nav className='main__nav__block' id='mainNavBlock'>
+            <main>
+                <div className="container main__nav__block" id='mainNavBlock'>
                     {pageLinks.map((link) => (
                         <span className="main__nav">
                             { (location.pathname === link.url) && <button className='close' onClick={() => {navigate('/')}}>X</button> }
                             <NavLink to={link.url}>{link.visibleText}</NavLink>
                         </span>
-                    ))}
-                </nav>               
-                    {children}
-            </div>
+                    ))}     
+                </div>
+                <button className='burger-menu' onClick={() => {setBurgerActive(!burgerActive)}}>{burgerActive ? "close" : "menu"}</button>        
+                {children}
+            </main>
     )
 }
 

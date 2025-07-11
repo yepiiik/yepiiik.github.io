@@ -10,7 +10,7 @@ function AnimatedRoutes() {
   let location = useLocation();
 
     return (
-          <main>
+          <>
             <Darkmode />
               
               <Routes location={location} key={location.pathname}>
@@ -34,14 +34,14 @@ function AnimatedRoutes() {
                   path="*"
                   element={
                     <Wrapper>
-                      <>
+                      <div className="container">
                         <h2>Not finished yet?</h2>
-                      </>
+                      </div>
                     </Wrapper>
                   }
                 />              
               </Routes>
-          </main>
+          </>
   );
 }
 
