@@ -12,7 +12,6 @@ function Wrapper({children}) {
     let location = useLocation();
     let navigate = useNavigate();
 
-
     const [burgerActive, setBurgerActive] = useState(false);
     useEffect(() => {
         const mainNavBlock = document.getElementById("mainNavBlock");
@@ -24,7 +23,6 @@ function Wrapper({children}) {
     }, [burgerActive])
     
     return (
-        
             <main>
                 <div className="container main__nav__block" id='mainNavBlock'>
                     {pageLinks.map((link) => (
@@ -35,7 +33,22 @@ function Wrapper({children}) {
                     ))}     
                 </div>
                 <button className='burger-menu' onClick={() => {setBurgerActive(!burgerActive)}}>{burgerActive ? "close" : "menu"}</button>        
-                {children}
+                <div className='main_children'>
+                    {children}
+                </div>
+                <div class="container">
+                    <nav id="quikContacts" class="footer__block">
+                        <a href="https://linkedin.com/in/yepik-denys" target='_blank'>LinkedIn</a>
+                        <a href="mailto:yepik.denys@gmail.com" target='_blank'>Email</a>
+                        <a href="https://github.com/yepiiik" target='_blank'>GitHub</a>
+                    </nav>
+                    <span class="footer__block">
+                        <a href="" target='_blank'>Facebook</a>
+                    </span>
+                    <span class="footer__block">
+                        <a href="" target='_blank'>Blog</a>
+                    </span>
+                </div>
             </main>
     )
 }

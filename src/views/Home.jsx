@@ -1,18 +1,23 @@
-import React, { useState, useEffect } from 'react'
-import { publicProjects, skills } from '../config/base'
+import React, { useState, useEffect, useCallback, useContext } from 'react'
+import { MainContext, publicProjects, skills } from '../config/base'
+import { db } from '../config/firebase';
+import { collection, getDoc, getDocs, query, where } from "firebase/firestore"; 
+
 
 function Home() {
+    const siteContent = useContext(MainContext);
+
     return (
         <>
             <div className="container main-container">
                 <section id="mainSection" className="bottom_divider grid-row">
-                    <h1>Denys Yepik</h1>
-                    <p>Application & Software development</p>
+                    <h1 className='main-title'>{siteContent['main-title']?.['content']}</h1>
+                    <p className='main-description'>{siteContent['main-description']?.['content']}</p>
                 </section>
             </div>
             <div className="container">
-                <section id="experience" className="bottom_divider grid-row">
-                    <h2 className="title">Public Porjects</h2>
+                <section id="experience">
+                    <h2 className="title">Public Projects</h2>
                     <ul className="list">
                         {publicProjects.map((project, id) => (
                             <li key={id}>
@@ -22,11 +27,11 @@ function Home() {
                         ))}
                     </ul>
                 </section>
-                <section id="mission" className="bottom_divider grid-row">
+                <section id="mission">
                     <h2 className="title">Mission</h2>
-                    <p>Simplify routine, Improve education, Connect people - all that using soft & hard skills</p>
+                    <p className='mission-description' dangerouslySetInnerHTML={{ __html: siteContent["mission-description"]?.['content'] }}></p>
                 </section>
-                <section id="skills" className="bottom_divider grid-row">
+                <section id="skills">
                     <h2 className="title">Skills</h2>
                     <ul className="skill_list list">
                         {skills.map((skill, id) => (

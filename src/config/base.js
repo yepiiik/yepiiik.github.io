@@ -1,3 +1,5 @@
+import { createContext, useContext } from "react";
+
 export const isDarkThemePreferred = true; 
 export const skills = [
     { name: "React", iconURL: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg", category: "Front-end" },
@@ -7,4 +9,13 @@ export const skills = [
 ];
 export const publicProjects = [
     { title: "JPO", description: "C++ multiplatform desktop application" }
-]
+];
+
+export const MainContext = createContext({});
+export const siteContent = {};
+export const getContent = (identificatory, data) => {
+    if (data === undefined) return {};
+    if (!('about-title' in data)) return {};
+
+    return data[identificatory];
+}
