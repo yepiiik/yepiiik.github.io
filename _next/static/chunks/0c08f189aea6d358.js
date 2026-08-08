@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,15204,t=>{"use strict";var o=t.i(18674);t.s(["BackButton",0,()=>(0,o.jsx)("button",{onClick:()=>window.history.back(),className:"text-sm font-bold flex items-center gap-2 opacity-50 hover:opacity-100 transition-opacity",children:"← Back to Projects"})])}]);
